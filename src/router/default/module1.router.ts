@@ -12,6 +12,12 @@ const routes: RouteConfig[] = [
     name: "Home2",
     component: () =>
       import(/* webpackChunkName: "home" */ "@/views/default-page/test-module/home2/index.vue")
+  },
+  {
+    path: "dataStructure",
+    name: "DataStructure",
+    component: () =>
+      import(/* webpackChunkName: "home" */ "@/views/dataStructure/index.vue")
   }
 ]
 export default routes

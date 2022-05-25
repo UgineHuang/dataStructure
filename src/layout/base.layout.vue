@@ -1,4 +1,4 @@
-<!-- 
+<!--
   坑点
   <template functional>
   路由出口不能使用函数式单文件组件
@@ -14,6 +14,7 @@
           <ul id="nav">
             <li><router-link to="/home">Home</router-link></li>
             <li><router-link to="/home2">Home2</router-link></li>
+            <li><router-link to="/dataStructure">数据结构</router-link></li>
             <li>
               <router-link to="/other/news1" target="_blank">List</router-link>
             </li>
