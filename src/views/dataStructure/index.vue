@@ -6,29 +6,38 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator"
-import {findTwoNumbers1,findTwoNumbers2} from '@/utils/dataStructure/two-number-sum'
-import '@/utils/dataStructure/binary-search-tree.ts'
+import {moveZero2} from '@/utils/dataStructure/moveZero'
 
 @Component
 export default class DataStructure extends Vue {
 
 
   created() {
-    console.log('数据结构学习')
-    const arr = [1,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,4,5,5,5,5,6,6,6,6,6,6,6,7,11,15]
-    const target = 15
-    console.log(findTwoNumbers1(arr,target))
-    console.time('1')
-    for(let i=0;i<10000*100;i++) {
-      findTwoNumbers1(arr,target)
-    }
-    console.timeEnd('1')
+    // const arr = []
+    // for(let i=0; i<20*10000;i++) {
+    //   if(i % 10 === 0) {
+    //     arr.push(0)
+    //   } else {
+    //     arr.push(i)
+    //   }
+    // }
+    // console.time('moveZero1')
+    // moveZero1(arr)
+    // console.timeEnd('moveZero1')
 
-    console.time('2')
-    for(let i=0;i<10000*100;i++) {
-      findTwoNumbers2(arr,target)
-    }
-    console.timeEnd('2')
+    // const arr1 = []
+    // for(let i=0; i<20*10000;i++) {
+    //   if(i % 10 === 0) {
+    //     arr1.push(0)
+    //   } else {
+    //     arr1.push(i)
+    //   }
+    // }
+    // console.time('moveZero2')
+    // moveZero2(arr1)
+    // console.timeEnd('moveZero2')
+    const arr = [1,0,3,4,0,0,0,11,13]
+    moveZero2(arr)
 
   }
 

@@ -14,7 +14,7 @@
           <ul id="nav">
             <li><router-link to="/home">Home</router-link></li>
             <li><router-link to="/home2">Home2</router-link></li>
-            <li><router-link to="/dataStructure">数据结构</router-link></li>
+            <li><router-link to="/dataStructure">dataStructure</router-link></li>
             <li>
               <router-link to="/other/news1" target="_blank">List</router-link>
             </li>
