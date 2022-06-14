@@ -60,7 +60,6 @@ export function moveZero2(arr:number[]):void {
   let i
   let j = -1 // 指向第一个0
   for(i=0;i<length;i++) {
-  debugger
     if(arr[i]===0) {
       // 第一个0
       if(j<0) {
