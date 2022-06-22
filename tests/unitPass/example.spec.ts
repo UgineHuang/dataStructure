@@ -1,17 +1,8 @@
-import {rotate1,rotate2} from '@/utils/dataStructure/rotateN'
+import {addBatchNo} from '@/utils/WMS/batch'
 
-describe("数组旋转", () => {
+describe("批次记录", () => {
   it("正常情况", () => {
-    expect(rotate2([1,2,3,4,5,6,7],3)).toEqual([5,6,7,1,2,3,4]);
+    const res = addBatchNo('FH123',null)
+    expect(res).toBe(JSON.stringify({'FH123':1}));
   });
-  it("数组为空", () => {
-    expect(rotate2([],3)).toEqual([]);
-  });
-  it("k不为数字", () => {
-  // @ts-ignore
-    expect(rotate2([1,2,3,4,5,6],'abc')).toEqual([1,2,3,4,5,6]);
-  });
-  it("k为0", () => {
-      expect(rotate2([1,2,3,4,5,6],0)).toEqual([1,2,3,4,5,6]);
-    });
 });
