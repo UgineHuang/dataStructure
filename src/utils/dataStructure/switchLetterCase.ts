@@ -28,7 +28,6 @@ export function switchLetterCase1(s:string):string {
   let res = ''
   const length = s.length
   if(length===0) return res
-
   for(let i=0;i<length;i++) {
     const c = s[i]
     const code = c.charCodeAt(0)
@@ -36,9 +35,10 @@ export function switchLetterCase1(s:string):string {
       res += c.toLowerCase()
     } else if(code>=97 && code <=122) {
       res += c.toUpperCase()
-    }else{
+    } else {
       res += c
     }
   }
   return res
 }
+
