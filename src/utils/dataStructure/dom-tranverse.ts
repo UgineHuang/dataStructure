@@ -16,55 +16,57 @@ function visitNode(n:Node) {
   }
 }
 /**
- * 深度优先遍历
+ * 深度优先遍历-递归
  * @param root
  */
-//  function depthFirstTraverse(root:Node) {
+//  function depthFirstTraverse1(root:Node) {
 //   visitNode(root)
 //   const childNodes = root.childNodes
 //   if(childNodes.length) {
 // 	  childNodes.forEach(child=>{
-// 		  depthFirstTraverse(child) // 递归
+// 		  depthFirstTraverse1(child) // 递归
 // 	  })
 //   }
 // }
-
 /**
- * 广度优先遍历 需要用到栈结构
+ * 深度优先遍历-栈
+ * @param root
  */
-// function breadthFirstTranverse(root:Node) {
-//   const queue:Node[] = [] //数组VS链表的性能
-//   //  根节点入队
-//   queue.unshift(root)
-//   while(queue.length>0) {
-//     const node = queue.pop()
-//     if(node){
-//       visitNode(node)
-//       const childNodes = node.childNodes
-//       childNodes.forEach(child=>{
-//         queue.unshift(child)
-//       })
-//     }
-//   }
-// }
-
-function breadthFirstTranverse1(root:Node) {
-  const queue:Node[] = [] //数组VS链表的性能1
-  //  根节点入队
-  queue.unshift(root)
-  while(queue.length>0) {
-    const  curNode = queue.pop()
+ function depthFirstTraverse2(root:Node) {
+  const stack:Node[] = []
+  // 根节点入栈
+  stack.push(root)
+  while(stack.length>0) {
+    const curNode = stack.pop()
     if(!curNode) break
     visitNode(curNode)
-    // 子节点入队
     const childNodes = curNode.childNodes
     if(childNodes.length) {
-      childNodes.forEach(child=>queue.unshift(child))
+      Array.from(childNodes).reverse().forEach(child=>stack.push(child))
     }
   }
 }
 
+/**
+ * 广度优先遍历 需要用到栈结构
+ */
+// function breadthFirstTranverse1(root:Node) {
+//   const queue:Node[] = [] //数组VS链表的性能1
+//   //  根节点入队
+//   queue.unshift(root)
+//   while(queue.length>0) {
+//     const  curNode = queue.pop()
+//     if(!curNode) break
+//     visitNode(curNode)
+//     // 子节点入队
+//     const childNodes = curNode.childNodes
+//     if(childNodes.length) {
+//       childNodes.forEach(child=>queue.unshift(child))
+//     }
+//   }
+// }
+
 const box = document.getElementById('box')
-console.log(box?.children)
-console.log(box?.childNodes)
-if(box !== null)  breadthFirstTranverse1(box)
+// console.log(box?.children)
+// console.log(box?.childNodes)
+if(box !== null)  depthFirstTraverse2(box)
