@@ -1,4 +1,4 @@
-<!-- 
+<!--
   坑点
   <template functional>
   路由出口不能使用函数式单文件组件
@@ -59,6 +59,7 @@ export default class OtherLayout extends Vue {}
 .el-header,
 .el-footer {
   background-color: #b3c0d1;
+  background-color: #fff;
   color: #333;
   text-align: center;
   height: 60px;
@@ -70,6 +71,7 @@ export default class OtherLayout extends Vue {}
 
 .el-aside {
   background-color: #d3dce6;
+  background-color: #fff;
   color: #333;
   text-align: center;
 }
