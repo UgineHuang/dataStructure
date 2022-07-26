@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator"
-// import {flatenDeep2} from '@/utils/dataStructure/arrayFlaten'
+import '@/utils/dataStructure/lazy-man'
 
 @Component
 export default class DataStructure extends Vue {

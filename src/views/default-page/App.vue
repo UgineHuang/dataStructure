@@ -17,7 +17,6 @@
   </div>
 </template>
 <script lang="ts">
-import '@/utils/dataStructure/dom-tranverse'
 import Vue from 'vue'
 export default Vue.extend({
 
