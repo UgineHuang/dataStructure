@@ -57,6 +57,7 @@ export default class BaseLayout extends Vue {}
 .el-header,
 .el-footer {
   background-color: #b3c0d1;
+  background-color: #fff;
   color: #333;
   text-align: center;
   height: 60px;
@@ -68,6 +69,7 @@ export default class BaseLayout extends Vue {}
 
 .el-aside {
   background-color: #d3dce6;
+  background-color: #fff;
   color: #333;
   text-align: center;
 }
