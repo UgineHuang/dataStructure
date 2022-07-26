@@ -40,17 +40,6 @@ export function flatenDeep1(arr:any[]):any[] {
   return res
 }
 
-// export function flatenDeep2(arr:any[],res:any[]):any[] {
-//   arr.forEach(item=>{
-//     if(Array.isArray(item)) {
-//       res = res.concat(flatenDeep2(item,res))
-//     } else {
-//       res = res.concat(item)
-//     }
-//   })
-//   return res
-// }
-
 export function flatenDeep2(arr:any[]):any[] {
   let res:any[]=[]
   arr.forEach(item=>{

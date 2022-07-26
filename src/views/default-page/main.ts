@@ -20,6 +20,8 @@ import coustomPlugin from "@/plugins/index";
 import request from "@/utils/requestInstance";
 // 读取本地存储数据（用户信息、token、权限等）
 import "@/utils/readyLocalStorage";
+import "@/utils/dataStructure/new";
+
 
 
 Vue.use(coustomDirective);
